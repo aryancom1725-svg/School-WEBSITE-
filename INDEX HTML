@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PM SHRI HARMUTTY DIKRONG HIGH SCHOOL</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5fff8;
+    color:#173b2a;
+}
+
+/* NAVBAR */
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#ffffff;
+    box-shadow:0 3px 15px rgba(0,0,0,.1);
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    padding:18px 25px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:20px;
+    font-weight:bold;
+    color:#087a3d;
+}
+
+.navbar ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+.navbar a{
+    text-decoration:none;
+    color:#17452e;
+    font-weight:600;
+}
+
+.navbar a:hover{
+    color:#08a34d;
+}
+
+/* HERO */
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:50px 20px;
+    background:
+    linear-gradient(rgba(0,105,55,.88),rgba(0,70,38,.88)),
+    url("https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1600&q=80");
+    background-size:cover;
+    background-position:center;
+    color:white;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.hero h1{
+    font-size:48px;
+    line-height:1.15;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 28px;
+    background:#ffffff;
+    color:#087a3d;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    background:#dffff0;
+}
+
+/* GENERAL */
+section{
+    padding:80px 20px;
+}
+
+.container{
+    max-width:1150px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title h2{
+    font-size:36px;
+    color:#087a3d;
+}
+
+.section-title p{
+    margin-top:10px;
+    color:#607568;
+}
+
+/* ABOUT */
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.about img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.about-text h3{
+    font-size:30px;
+    margin-bottom:18px;
+    color:#087a3d;
+}
+
+.about-text p{
+    line-height:1.8;
+    color:#50665a;
+}
+
+/* CARDS */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card .icon{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    color:#087a3d;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#65756c;
+    line-height:1.6;
+}
+
+/* STAFF */
+.staff-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.teacher{
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,.1);
+    text-align:center;
+}
+
+.teacher img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+}
+
+.teacher-info{
+    padding:22px;
+}
+
+.teacher-info h3{
+    color:#087a3d;
+    margin-bottom:8px;
+}
+
+.teacher-info p{
+    color:#65756c;
+    line-height:1.5;
+}
+
+/* GALLERY */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.gallery img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.03);
+}
+
+/* SPORTS */
+.sports{
+    background:#eafff2;
+}
+
+.sport-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.sport{
+    background:white;
+    padding:30px 15px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 6px 20px rgba(0,0,0,.07);
+}
+
+.sport h3{
+    margin-top:12px;
+    color:#087a3d;
+}
+
+/* NOTICE */
+.notice-box{
+    max-width:850px;
+    margin:auto;
+}
+
+.notice{
+    background:white;
+    padding:20px;
+    margin-bottom:15px;
+    border-left:5px solid #087a3d;
+    border-radius:8px;
+    box-shadow:0 5px 15px rgba(0,0,0,.06);
+}
+
+/* CONTACT */
+.contact{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+}
+
+.contact-info{
+    background:#087a3d;
+    color:white;
+    padding:35px;
+    border-radius:20px;
+}
+
+.contact-info h3{
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.contact-info p{
+    margin:15px 0;
+}
+
+form{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+input, textarea{
+    width:100%;
+    padding:14px;
+    margin-bottom:15px;
+    border:1px solid #d5e5dc;
+    border-radius:8px;
+    outline:none;
+}
+
+textarea{
+    height:130px;
+    resize:none;
+}
+
+button{
+    border:none;
+    padding:14px 25px;
+    border-radius:25px;
+    background:#087a3d;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#065c2e;
+}
+
+/* FOOTER */
+footer{
+    background:#073b22;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+}
+
+footer p{
+    margin:8px;
+    color:#c8e6d5;
+}
+
+/* MOBILE */
+@media(max-width:800px){
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .navbar ul{
+        gap:12px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .about,
+    .contact{
+        grid-template-columns:1fr;
+    }
+
+    .cards,
+    .staff-grid,
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    .sport-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+<nav class="navbar">
+
+<div class="logo">
+PM SHRI HARMUTTY DIKRONG
+</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#staff">Staff</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#sports">Sports</a></li>
+<li><a href="#notice">Notices</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+</header>
+
+
+<!-- HOME -->
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1>
+PM SHRI HARMUTTY DIKRONG HIGH SCHOOL
+</h1>
+
+<p>
+Education • Discipline • Excellence
+</p>
+
+<a href="#about" class="btn">
+Explore Our School
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section id="about">
+
+<div class="container">
+
+<div class="section-title">
+<h2>About Our School</h2>
+<p>Welcome to PM SHRI HARMUTTY DIKRONG HIGH SCHOOL</p>
+</div>
+
+<div class="about">
+
+<img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1000&q=80">
+
+<div class="about-text">
+
+<h3>Our School</h3>
+
+<p>
+PM SHRI HARMUTTY DIKRONG HIGH SCHOOL is committed to providing
+quality education and creating a positive environment where students
+can learn, grow and achieve their dreams.
+</p>
+
+<br>
+
+<p>
+Our school focuses on academic excellence, discipline, sports,
+creativity and the overall development of every student.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FEATURES -->
+<section>
+
+<div class="container">
+
+<div class="section-title">
+<h2>What We Provide</h2>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">📚</div>
+<h3>Quality Education</h3>
+<p>Helping students develop knowledge and skills for the future.</p>
+</div>
+
+<div class="card">
+<div class="icon">👨‍🏫</div>
+<h3>Experienced Staff</h3>
+<p>Dedicated teachers supporting students throughout their learning journey.</p>
+</div>
+
+<div class="card">
+<div class="icon">🏆</div>
+<h3>Overall Development</h3>
+<p>Encouraging academics, sports, creativity and leadership.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- STAFF -->
+<section id="staff">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Our Staff</h2>
+<p>Add your teachers' photos and information here.</p>
+</div>
+
+<div class="staff-grid">
+
+<div class="teacher">
+
+<img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=700&q=80">
+
+<div class="teacher-info">
+<h3>Teacher Name</h3>
+<p><b>Subject:</b> Mathematics</p>
+<p>Teacher introduction and information can be written here.</p>
+</div>
+
+</div>
+
+
+<div class="teacher">
+
+<img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=700&q=80">
+
+<div class="teacher-info">
+<h3>Teacher Name</h3>
+<p><b>Subject:</b> Science</p>
+<p>Teacher introduction and information can be written here.</p>
+</div>
+
+</div>
+
+
+<div class="teacher">
+
+<img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=700&q=80">
+
+<div class="teacher-info">
+<h3>Teacher Name</h3>
+<p><b>Subject:</b> English</p>
+<p>Teacher introduction and information can be written here.</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- GALLERY -->
+<section id="gallery">
+
+<div class="container">
+
+<div class="section-title">
+<h2>School Gallery</h2>
+<p>School events, activities and memorable moments.</p>
+</div>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=80">
+
+<img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=900&q=80">
+
+<img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=900&q=80">
+
+<img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&w=900&q=80">
+
+<img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=900&q=80">
+
+<img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=900&q=80">
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SPORTS -->
+<section id="sports" class="sports">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Sports</h2>
+<p>Encouraging fitness, teamwork and sportsmanship.</p>
+</div>
+
+<div class="sport-grid">
+
+<div class="sport">
+<div style="font-size:45px;">⚽</div>
+<h3>Football</h3>
+</div>
+
+<div class="sport">
+<div style="font-size:45px;">🏏</div>
+<h3>Cricket</h3>
+</div>
+
+<div class="sport">
+<div style="font-size:45px;">🏸</div>
+<h3>Badminton</h3>
+</div>
+
+<div class="sport">
+<div style="font-size:45px;">🏃</div>
+<h3>Athletics</h3>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- NOTICES -->
+<section id="notice">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Latest Notices</h2>
+<p>Important school announcements.</p>
+</div>
+
+<div class="notice-box">
+
+<div class="notice">
+<b>School Notice</b>
+<p>Important announcement will appear here.</p>
+</div>
+
+<div class="notice">
+<b>Upcoming Event</b>
+<p>Details about upcoming school events can be added here.</p>
+</div>
+
+<div class="notice">
+<b>Sports Event</b>
+<p>Sports competition information can be added here.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Contact Us</h2>
+<p>Get in touch with our school.</p>
+</div>
+
+<div class="contact">
+
+<div class="contact-info">
+
+<h3>PM SHRI HARMUTTY DIKRONG HIGH SCHOOL</h3>
+
+<p>📍 Harmutty, Assam, India</p>
+
+<p>📞 School Phone Number</p>
+
+<p>✉️ School Email Address</p>
+
+</div>
+
+
+<form onsubmit="sendMessage(event)">
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="email" placeholder="Your Email" required>
+
+<input type="text" placeholder="Subject" required>
+
+<textarea placeholder="Your Message" required></textarea>
+
+<button type="submit">
+Send Message
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+<h3>PM SHRI HARMUTTY DIKRONG HIGH SCHOOL</h3>
+
+<p>Education • Discipline • Excellence</p>
+
+<p>© 2026 PM SHRI HARMUTTY DIKRONG HIGH SCHOOL. All Rights Reserved.</p>
+
+</footer>
+
+
+<script>
+
+function sendMessage(event){
+
+event.preventDefault();
+
+alert("Thank you! Your message has been submitted.");
+
+}
+
+</script>
+
+</body>
+</html>
